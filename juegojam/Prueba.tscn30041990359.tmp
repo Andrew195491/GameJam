@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf5q18ub7aid2"]
+
+[ext_resource type="Script" uid="uid://cdu5ju3f3nnin" path="res://Preguntas.gd" id="1_7ucbv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.823661, 0.268088, 0.69742, 1)
+script = ExtResource("1_7ucbv")
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.101157, 0.441434, 0.490475, 1)
+
+[node name="Label" type="Label" parent="HBoxContainer/ColorRect2"]
+offset_left = 112.0
+offset_top = 86.0
+offset_right = 416.0
+offset_bottom = 186.0
+
+[node name="Label3" type="Label" parent="HBoxContainer/ColorRect2"]
+offset_left = 113.0
+offset_top = 493.0
+offset_right = 417.0
+offset_bottom = 593.0
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/ColorRect2"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 214.0
+offset_right = 246.0
+offset_bottom = 302.0
+
+[node name="Button2" type="Button" parent="HBoxContainer/ColorRect2"]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 216.0
+offset_right = 538.0
+offset_bottom = 304.0
+
+[node name="Timer" type="Timer" parent="HBoxContainer/ColorRect2"]
+wait_time = 20.0
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/ColorRect2"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 61.0
