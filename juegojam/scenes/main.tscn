@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://doymdslx1noww"]
+
+[ext_resource type="Script" uid="uid://di0x14cc8s1pt" path="res://scripts/MenuPanel.gd" id="1_0wfyh"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="MenuPanel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_0wfyh")
+
+[node name="Control" type="Control" parent="MenuPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuContainer" type="VBoxContainer" parent="MenuPanel/Control"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 253.0
+offset_right = 649.0
+offset_bottom = 385.0
+
+[node name="PlayButton" type="Button" parent="MenuPanel/Control/MenuContainer"]
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="MenuPanel/Control/MenuContainer"]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="MenuPanel/Control/MenuContainer"]
+layout_mode = 2
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="MenuPanel"]

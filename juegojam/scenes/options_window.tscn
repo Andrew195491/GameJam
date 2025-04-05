@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2qtmnlatbb78"]
+
+[ext_resource type="Script" uid="uid://btdgejb01r061" path="res://scripts/OptionsPanel.gd" id="1_gqmgd"]
+
+[node name="SettingsWindow" type="Node2D"]
+
+[node name="OptionsPanel" type="Panel" parent="."]
+offset_right = 1150.0
+offset_bottom = 648.0
+script = ExtResource("1_gqmgd")
+
+[node name="Control" type="Control" parent="OptionsPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionsContainer" type="VBoxContainer" parent="OptionsPanel/Control"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 253.0
+offset_right = 649.0
+offset_bottom = 385.0
+
+[node name="VolumeLabel" type="RichTextLabel" parent="OptionsPanel/Control/OptionsContainer"]
+layout_mode = 2
+
+[node name="Volume" type="HSlider" parent="OptionsPanel/Control/OptionsContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="OptionsPanel/Control/OptionsContainer"]
+layout_mode = 2
