@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chuuhpw53k6us"
+path="res://.godot/imported/caffein.wav-5ab8d52702da445c49eb2699f1799311.sample"
+
+[deps]
+
+source_file="res://sound/SFX ingredientes/caffein.wav"
+dest_files=["res://.godot/imported/caffein.wav-5ab8d52702da445c49eb2699f1799311.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

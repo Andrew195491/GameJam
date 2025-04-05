@@ -1,9 +1,12 @@
 extends ColorRect
 
 @onready var label = $Label
+@onready var label2 = $Label2 # Add Label2
 @onready var label3 = $Label3
 @onready var button = $Button
 @onready var button2 = $Button2
+@onready var timer = $Timer
+@onready var progress_bar = $ProgressBar
 
 var numero_random = RandomNumberGenerator.new()
 var personajes_random = null
@@ -50,28 +53,78 @@ var dialogo_actual = null
 
 var jantil_dialog_indices = [] # Store available Jantil dialog indices
 var jantil_completed = false # Flag to track if Jantil has said all his lines
+var timer_duration = 10.0 # Set the duration in seconds
+var time_remaining = timer_duration
+var timer_active = false
+var yalma_denied = false # New variable to track if Yalma has been denied
+var delay_duration = 3.0 # Add the delay duration
+var delay_remaining = 0.0
+var delay_active = false
+var label2_visible = true #For blink label
 
 func _ready() -> void:
     button.pressed.connect(_button_pressed)
     button2.pressed.connect(_button2_pressed)
+    timer.timeout.connect(_on_timer_timeout)
     numero_random.randomize()  # Seed the random number generator
+    progress_bar.max_value = timer_duration  # Set max value of progress bar
+    progress_bar.value = timer_duration  # Initialize progress bar
+    label2.hide()  # Initially hide label2
     random()
 
+func _process(delta):
+    if timer_active:
+        time_remaining -= delta
+        progress_bar.value = time_remaining
+        if time_remaining <= 0:
+            timer_active = false
+            time_remaining = timer_duration  # Reset timer
+            progress_bar.value = timer_duration # Reset progress bar
+            start_delay()  # Start the delay
+
+    if delay_active: # Add code if delay is acive, count the delay
+        delay_remaining -= delta
+        if delay_remaining <= 0: # if finish, back to normal
+            delay_active = false
+            label2.hide()
+            random() # select a new dialog
+        else: #If still the delay, blink label2
+            label2_visible = !label2_visible
+            label2.visible = label2_visible
+        
 func _button_pressed():
     if dialogo_actual.has("camino"):
         var next_id = dialogo_actual["camino"][0] if typeof(dialogo_actual["camino"]) == TYPE_ARRAY else dialogo_actual["camino"]
         mostrar_dialogo_por_id(next_id)
+        start_timer()
+
+        # Si es Yalma y se seleccionó una negación
+        if personajes_random["id_Per"] == 3 and dialogo_actual["id_Dia"] == 4:
+            yalma_denied = true
+            print("Yalma ha sido denegada.")
     else:
         random()
+        
 
 func _button2_pressed():
     if dialogo_actual.has("camino") and typeof(dialogo_actual["camino"]) == TYPE_ARRAY and dialogo_actual["camino"].size() > 1:
         var next_id = dialogo_actual["camino"][1]
         mostrar_dialogo_por_id(next_id)
+        start_timer()
+
+        # Si es Yalma y se seleccionó una negación
+        if personajes_random["id_Per"] == 3 and dialogo_actual["id_Dia"] == 4:
+            yalma_denied = true
+            print("Yalma ha sido denegada.")
     else:
         random()
 
 func random():
+    stop_timer()  # Stop any existing timer
+    button.disabled = false
+    button2.disabled = false
+    time_remaining = timer_duration # Reset the timer
+    progress_bar.value = timer_duration
     if not jantil_completed:
         if personajes_random != null and personajes_random["id_Per"] == 1: #If the last character was Jantil, continue the dialog
             mostrar_jantil_dialog()
@@ -80,9 +133,18 @@ func random():
     if personaje_anterior != null:
         id_Per_anterior = personaje_anterior["id_Per"]
 
+    # Create a filtered array that excludes Yalma if she's been denied
+    var available_characters = []
+   
+
     while id_Per_anterior == id_Per:
-        var random_number = numero_random.randi_range(0, personajes.size() - 1)
-        personajes_random = personajes[random_number]
+       # Create a filtered array that excludes Yalma if she's been denied
+        if yalma_denied:
+            available_characters = personajes.filter(func(char): return char["id_Per"] != 3)
+        else:
+            available_characters = personajes.duplicate() # Create a copy to avoid modifying the original
+        var random_number = numero_random.randi_range(0, available_characters.size() - 1)
+        personajes_random = available_characters[random_number]
         id_Per = personajes_random["id_Per"]
 
     personaje_anterior = personajes_random
@@ -93,8 +155,10 @@ func random():
     else:
         mostrar_dialogo_personaje(personajes_random) #For other character, show it as usual
 
-
 func mostrar_jantil_dialog() -> void:
+    stop_timer()  # Stop any existing timer
+    time_remaining = timer_duration
+    progress_bar.value = timer_duration
     if jantil_dialog_indices.size() > 0: # Check if there are any dialog to show
         var dialog_index = jantil_dialog_indices.pop_front()  # Get an index for show the dialog and remove the dialog
 
@@ -110,7 +174,9 @@ func mostrar_jantil_dialog() -> void:
         else:
             button.text = dialogo_actual["respuesta"]
             button2.hide()
+        start_timer()
         return # stop the proccess for show other character dialogs
+        
 
     jantil_completed = true # if no dialog to show mark this to complete and jump another character
     random() # jump to random to select another character
@@ -123,6 +189,9 @@ func init_jantil_dialog() -> void: #This fuction is for initialize the Jantil ar
     jantil_dialog_indices.shuffle() # Shuffle that
 
 func mostrar_dialogo_personaje(personaje):
+    stop_timer()  # Stop any existing timer
+    time_remaining = timer_duration
+    progress_bar.value = timer_duration
     var nombre = personaje["nombre"]
     var dialogos = personaje["dialogos"]
 
@@ -145,9 +214,12 @@ func mostrar_dialogo_personaje(personaje):
     else:
         button.text = dialogo_actual["respuesta"]
         button2.hide()
-
+    start_timer()
 
 func mostrar_dialogo_por_id(id_dia):
+    stop_timer()  # Stop any existing timer
+    time_remaining = timer_duration
+    progress_bar.value = timer_duration
     var dialogos = personajes_random["dialogos"]
     for d in dialogos:
         if d["id_Dia"] == id_dia:
@@ -160,4 +232,31 @@ func mostrar_dialogo_por_id(id_dia):
             else:
                 button.text = d["respuesta"]
                 button2.hide()
+            start_timer()
             return
+
+func start_timer():
+    timer_active = true
+    time_remaining = timer_duration
+    progress_bar.value = timer_duration
+
+func stop_timer():
+    timer_active = false
+    time_remaining = timer_duration
+    progress_bar.value = timer_duration
+
+func start_delay() -> void: # Add delay for start next dialog
+    jantil_completed = true
+    delay_active = true #Set the delay
+    delay_remaining = delay_duration  # Set the timer
+    label2.text = "¡El cliente se ha ido enfadado, viene otro cliente!"  # Set the text
+    label2.show() # Show the label2
+    button.disabled = true
+    button2.disabled = true
+    
+
+func _on_timer_timeout():
+    timer_active = false
+    time_remaining = timer_duration
+    progress_bar.value = timer_duration
+    random() # Go to the next dialog

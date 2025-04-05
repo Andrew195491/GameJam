@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf5q18ub7aid2"]
+[gd_scene load_steps=5 format=3 uid="uid://bf5q18ub7aid2"]
 
 [ext_resource type="Script" uid="uid://4r5pta2y48u8" path="res://scripts/Dialogos.gd" id="1_e66qu"]
+[ext_resource type="FontFile" uid="uid://c26wtgdx4v4t0" path="res://font/static/Gluten-Light.ttf" id="2_4kivy"]
+[ext_resource type="FontFile" uid="uid://c4x3n0fn1ncnq" path="res://font/static/Gluten-Medium.ttf" id="3_tff7q"]
+[ext_resource type="FontFile" uid="uid://drgu8oulgspo3" path="res://font/static/Gluten-Bold.ttf" id="4_6ari8"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,40 +24,65 @@ script = ExtResource("1_e66qu")
 
 [node name="Label" type="Label" parent="HBoxContainer/ColorRect2"]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 86.0
-offset_right = 416.0
-offset_bottom = 186.0
+offset_left = 5.0
+offset_top = 792.0
+offset_right = 953.0
+offset_bottom = 931.0
+theme_override_fonts/font = ExtResource("2_4kivy")
+theme_override_font_sizes/font_size = 40
+text = "Hola que tallllllll"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="HBoxContainer/ColorRect2"]
 layout_mode = 0
-offset_left = 71.0
-offset_top = 334.0
-offset_right = 375.0
-offset_bottom = 434.0
+offset_left = 3.0
+offset_top = 419.0
+offset_right = 951.0
+offset_bottom = 558.0
+theme_override_fonts/font = ExtResource("3_tff7q")
+theme_override_font_sizes/font_size = 40
+text = "Se fue"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
+uppercase = true
 
 [node name="Label3" type="Label" parent="HBoxContainer/ColorRect2"]
 layout_mode = 0
-offset_left = 113.0
-offset_top = 493.0
-offset_right = 417.0
-offset_bottom = 593.0
+offset_top = 60.0
+offset_right = 958.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("4_6ari8")
+theme_override_font_sizes/font_size = 60
+text = "nombre"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
+uppercase = true
 
 [node name="Button" type="Button" parent="HBoxContainer/ColorRect2"]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 214.0
-offset_right = 246.0
-offset_bottom = 302.0
+offset_left = 5.0
+offset_top = 936.0
+offset_right = 412.0
+offset_bottom = 1075.0
+theme_override_fonts/font = ExtResource("2_4kivy")
+theme_override_font_sizes/font_size = 35
+text = "siiiiiiiiiiiii"
+autowrap_mode = 3
 
 [node name="Button2" type="Button" parent="HBoxContainer/ColorRect2"]
 layout_mode = 0
-offset_left = 311.0
-offset_top = 216.0
-offset_right = 538.0
-offset_bottom = 304.0
+offset_left = 546.0
+offset_top = 936.0
+offset_right = 953.0
+offset_bottom = 1075.0
+theme_override_fonts/font = ExtResource("2_4kivy")
+theme_override_font_sizes/font_size = 35
+text = "noooooooooooooo"
+autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="HBoxContainer/ColorRect2"]
 wait_time = 20.0
@@ -64,3 +92,4 @@ one_shot = true
 layout_mode = 0
 offset_right = 958.0
 offset_bottom = 61.0
+show_percentage = false

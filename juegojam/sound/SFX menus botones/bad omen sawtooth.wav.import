@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://e2yfkq0btf0m"
+path="res://.godot/imported/bad omen sawtooth.wav-e0d8a3702150583a263b12fab2e22364.sample"
+
+[deps]
+
+source_file="res://sound/SFX menus botones/bad omen sawtooth.wav"
+dest_files=["res://.godot/imported/bad omen sawtooth.wav-e0d8a3702150583a263b12fab2e22364.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2b4vxycbkuc3"
+path="res://.godot/imported/click basico noise 2.wav-59c1a842f4cdc9a1ca8c8a8556e48147.sample"
+
+[deps]
+
+source_file="res://sound/SFX menus botones/click basico noise 2.wav"
+dest_files=["res://.godot/imported/click basico noise 2.wav-59c1a842f4cdc9a1ca8c8a8556e48147.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
