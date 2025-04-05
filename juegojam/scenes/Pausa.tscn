@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://84dk0hud5woy"]
+
+[ext_resource type="Texture2D" uid="uid://d2iy5rwpbakas" path="res://images/menu de pausat.png" id="1_0x36i"]
+[ext_resource type="Script" uid="uid://bpo4w5fyw05ef" path="res://scripts/Pausa.gd" id="1_ff6no"]
+[ext_resource type="Texture2D" uid="uid://dbwor1n6gtc7x" path="res://images/boton pausa_real.png" id="2_ff6no"]
+
+[node name="Pausa" type="Node2D"]
+script = ExtResource("1_ff6no")
+
+[node name="Pause" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(1.00366, 1)
+texture = ExtResource("1_0x36i")
+
+[node name="OptionsButton" type="TextureButton" parent="Pause"]
+visible = false
+offset_left = -426.0
+offset_top = 203.0
+offset_right = 278.0
+offset_bottom = 368.0
+texture_normal = ExtResource("2_ff6no")
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Pause/OptionsButton"]
+visible = false
+layout_mode = 0
+offset_right = 694.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 60
+text = "Opciones"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuButton" type="TextureButton" parent="Pause"]
+visible = false
+offset_left = -421.0
+offset_top = -33.0
+offset_right = 283.0
+offset_bottom = 132.0
+texture_normal = ExtResource("2_ff6no")
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Pause/MenuButton"]
+visible = false
+layout_mode = 0
+offset_right = 694.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 60
+text = "Menú Principal"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ContinueButton" type="TextureButton" parent="Pause"]
+visible = false
+offset_left = -403.0
+offset_top = -280.0
+offset_right = 301.0
+offset_bottom = -115.0
+texture_normal = ExtResource("2_ff6no")
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Pause/ContinueButton"]
+visible = false
+layout_mode = 0
+offset_right = 694.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 60
+text = "Continuar"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

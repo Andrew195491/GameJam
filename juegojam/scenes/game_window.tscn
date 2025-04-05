@@ -1,25 +1,26 @@
-[gd_scene load_steps=21 format=3 uid="uid://gc4l84mvfqr8"]
+[gd_scene load_steps=22 format=3 uid="uid://gc4l84mvfqr8"]
 
 [ext_resource type="Script" uid="uid://cds8jncvv2vvu" path="res://scripts/GameWindow.gd" id="1_q0rpe"]
 [ext_resource type="Script" uid="uid://d21tpwo3u2462" path="res://scripts/LeftPanel.gd" id="2_h0jfx"]
 [ext_resource type="Script" uid="uid://4r5pta2y48u8" path="res://scripts/Dialogos.gd" id="3_5bvbt"]
 [ext_resource type="FontFile" uid="uid://c26wtgdx4v4t0" path="res://font/static/Gluten-Light.ttf" id="4_llew5"]
-[ext_resource type="AudioStream" uid="uid://cjqhvr4u4gxuh" path="res://sound/SFX ingredientes/cafe_cuantico.wav" id="4_vgije"]
+[ext_resource type="AudioStream" uid="uid://cjqhvr4u4gxuh" path="res://sound/SFX ingredientes/cafe cunatico.wav" id="4_vgije"]
 [ext_resource type="AudioStream" uid="uid://chuuhpw53k6us" path="res://sound/SFX ingredientes/caffein.wav" id="5_asirt"]
 [ext_resource type="FontFile" uid="uid://c4x3n0fn1ncnq" path="res://font/static/Gluten-Medium.ttf" id="5_r8j6e"]
 [ext_resource type="FontFile" uid="uid://drgu8oulgspo3" path="res://font/static/Gluten-Bold.ttf" id="6_bq3us"]
 [ext_resource type="AudioStream" uid="uid://cvjb3vg5p6not" path="res://sound/SFX ingredientes/F.wav" id="6_sd2o7"]
-[ext_resource type="AudioStream" uid="uid://bwaijs8nmsbc6" path="res://sound/SFX ingredientes/fruta_alien.wav" id="7_pudxf"]
-[ext_resource type="AudioStream" uid="uid://cycrj1h6hx7ui" path="res://sound/SFX ingredientes/garra_dedo.wav" id="8_iw28x"]
+[ext_resource type="AudioStream" uid="uid://bwaijs8nmsbc6" path="res://sound/SFX ingredientes/fruta alien.wav" id="7_pudxf"]
+[ext_resource type="AudioStream" uid="uid://cycrj1h6hx7ui" path="res://sound/SFX ingredientes/garra dedo.wav" id="8_iw28x"]
 [ext_resource type="AudioStream" uid="uid://coafa5yof4vb8" path="res://sound/SFX ingredientes/lemon.wav" id="9_ns8k7"]
 [ext_resource type="AudioStream" uid="uid://d6xmwx3yic18" path="res://sound/SFX ingredientes/lightspeed.wav" id="10_5tgvw"]
-[ext_resource type="AudioStream" uid="uid://3cy4t3dgmlkc" path="res://sound/SFX ingredientes/mad.wav" id="11_3k3cv"]
+[ext_resource type="AudioStream" uid="uid://3cy4t3dgmlkc" path="res://sound/SFX ingredientes/MAD.wav" id="11_3k3cv"]
 [ext_resource type="AudioStream" uid="uid://brrsqdnnck23j" path="res://sound/SFX ingredientes/naranja.wav" id="12_k07sk"]
-[ext_resource type="AudioStream" uid="uid://cgxy3tpyhwiku" path="res://sound/SFX ingredientes/vodka_estelar.wav" id="13_g7fy1"]
+[ext_resource type="AudioStream" uid="uid://cgxy3tpyhwiku" path="res://sound/SFX ingredientes/vodka estelar.wav" id="13_g7fy1"]
 [ext_resource type="AudioStream" uid="uid://c5vetk023or5g" path="res://sound/SFX ingredientes/blackhole.wav" id="14_m14qh"]
-[ext_resource type="AudioStream" uid="uid://d27p75bte3fjx" path="res://sound/jingles cocteles/jingle_coctel_1.wav" id="15_asirt"]
-[ext_resource type="AudioStream" uid="uid://s06dj23ygtci" path="res://sound/SFX ingredientes/cafe_encurtido.wav" id="15_dpmpl"]
-[ext_resource type="AudioStream" uid="uid://cu705sdkri2kg" path="res://sound/jingles cocteles/jingle_coctel_2.wav" id="16_sd2o7"]
+[ext_resource type="AudioStream" uid="uid://d27p75bte3fjx" path="res://sound/jingles cocteles/jingle coctel 1.wav" id="15_asirt"]
+[ext_resource type="AudioStream" uid="uid://s06dj23ygtci" path="res://sound/SFX ingredientes/cafe encurtido.wav" id="15_dpmpl"]
+[ext_resource type="AudioStream" uid="uid://cu705sdkri2kg" path="res://sound/jingles cocteles/jingle coctel 2.wav" id="16_sd2o7"]
+[ext_resource type="PackedScene" uid="uid://84dk0hud5woy" path="res://scenes/Pausa.tscn" id="21_sd2o7"]
 
 [node name="GameWindow" type="Node2D"]
 
@@ -223,3 +224,6 @@ layout_mode = 0
 offset_right = 958.0
 offset_bottom = 61.0
 show_percentage = false
+
+[node name="Pausa" parent="GamePanel" instance=ExtResource("21_sd2o7")]
+process_mode = 3

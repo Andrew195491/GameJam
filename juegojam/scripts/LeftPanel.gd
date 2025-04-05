@@ -94,7 +94,7 @@ var selected_ingredients = []
 var selected_drink_ingredients = []
 
 # Timer variables
-var drink_creation_time = 100.0  # Total time for the drink creation (in seconds)
+var drink_creation_time = 10.0  # Total time for the drink creation (in seconds)
 var time_left = drink_creation_time  # Time remaining for the drink creation
 var mouse_is_on_screen = false  # Flag to track if the mouse is on screen
 

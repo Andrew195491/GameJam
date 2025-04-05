@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf5q18ub7aid2"]
+[gd_scene load_steps=6 format=3 uid="uid://dnek2rwvl5btx"]
 
 [ext_resource type="Script" uid="uid://4r5pta2y48u8" path="res://scripts/Dialogos.gd" id="1_e66qu"]
 [ext_resource type="FontFile" uid="uid://c26wtgdx4v4t0" path="res://font/static/Gluten-Light.ttf" id="2_4kivy"]
 [ext_resource type="FontFile" uid="uid://c4x3n0fn1ncnq" path="res://font/static/Gluten-Medium.ttf" id="3_tff7q"]
 [ext_resource type="FontFile" uid="uid://drgu8oulgspo3" path="res://font/static/Gluten-Bold.ttf" id="4_6ari8"]
+[ext_resource type="PackedScene" uid="uid://84dk0hud5woy" path="res://scenes/Pausa.tscn" id="5_tff7q"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -93,3 +94,6 @@ layout_mode = 0
 offset_right = 958.0
 offset_bottom = 61.0
 show_percentage = false
+
+[node name="Pausa" parent="." instance=ExtResource("5_tff7q")]
+process_mode = 3
