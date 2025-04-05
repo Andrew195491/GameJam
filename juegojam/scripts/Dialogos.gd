@@ -140,7 +140,7 @@ func random():
     while id_Per_anterior == id_Per:
        # Create a filtered array that excludes Yalma if she's been denied
         if yalma_denied:
-            available_characters = personajes.filter(func(char): return char["id_Per"] != 3)
+            available_characters = personajes.filter(func(joaquin): return joaquin["id_Per"] != 3)
         else:
             available_characters = personajes.duplicate() # Create a copy to avoid modifying the original
         var random_number = numero_random.randi_range(0, available_characters.size() - 1)

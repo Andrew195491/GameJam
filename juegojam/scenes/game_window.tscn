@@ -1,0 +1,225 @@
+[gd_scene load_steps=21 format=3 uid="uid://gc4l84mvfqr8"]
+
+[ext_resource type="Script" uid="uid://cds8jncvv2vvu" path="res://scripts/GameWindow.gd" id="1_q0rpe"]
+[ext_resource type="Script" uid="uid://d21tpwo3u2462" path="res://scripts/LeftPanel.gd" id="2_h0jfx"]
+[ext_resource type="Script" uid="uid://4r5pta2y48u8" path="res://scripts/Dialogos.gd" id="3_5bvbt"]
+[ext_resource type="FontFile" uid="uid://c26wtgdx4v4t0" path="res://font/static/Gluten-Light.ttf" id="4_llew5"]
+[ext_resource type="AudioStream" uid="uid://cjqhvr4u4gxuh" path="res://sound/SFX ingredientes/cafe_cuantico.wav" id="4_vgije"]
+[ext_resource type="AudioStream" uid="uid://chuuhpw53k6us" path="res://sound/SFX ingredientes/caffein.wav" id="5_asirt"]
+[ext_resource type="FontFile" uid="uid://c4x3n0fn1ncnq" path="res://font/static/Gluten-Medium.ttf" id="5_r8j6e"]
+[ext_resource type="FontFile" uid="uid://drgu8oulgspo3" path="res://font/static/Gluten-Bold.ttf" id="6_bq3us"]
+[ext_resource type="AudioStream" uid="uid://cvjb3vg5p6not" path="res://sound/SFX ingredientes/F.wav" id="6_sd2o7"]
+[ext_resource type="AudioStream" uid="uid://bwaijs8nmsbc6" path="res://sound/SFX ingredientes/fruta_alien.wav" id="7_pudxf"]
+[ext_resource type="AudioStream" uid="uid://cycrj1h6hx7ui" path="res://sound/SFX ingredientes/garra_dedo.wav" id="8_iw28x"]
+[ext_resource type="AudioStream" uid="uid://coafa5yof4vb8" path="res://sound/SFX ingredientes/lemon.wav" id="9_ns8k7"]
+[ext_resource type="AudioStream" uid="uid://d6xmwx3yic18" path="res://sound/SFX ingredientes/lightspeed.wav" id="10_5tgvw"]
+[ext_resource type="AudioStream" uid="uid://3cy4t3dgmlkc" path="res://sound/SFX ingredientes/mad.wav" id="11_3k3cv"]
+[ext_resource type="AudioStream" uid="uid://brrsqdnnck23j" path="res://sound/SFX ingredientes/naranja.wav" id="12_k07sk"]
+[ext_resource type="AudioStream" uid="uid://cgxy3tpyhwiku" path="res://sound/SFX ingredientes/vodka_estelar.wav" id="13_g7fy1"]
+[ext_resource type="AudioStream" uid="uid://c5vetk023or5g" path="res://sound/SFX ingredientes/blackhole.wav" id="14_m14qh"]
+[ext_resource type="AudioStream" uid="uid://d27p75bte3fjx" path="res://sound/jingles cocteles/jingle_coctel_1.wav" id="15_asirt"]
+[ext_resource type="AudioStream" uid="uid://s06dj23ygtci" path="res://sound/SFX ingredientes/cafe_encurtido.wav" id="15_dpmpl"]
+[ext_resource type="AudioStream" uid="uid://cu705sdkri2kg" path="res://sound/jingles cocteles/jingle_coctel_2.wav" id="16_sd2o7"]
+
+[node name="GameWindow" type="Node2D"]
+
+[node name="GamePanel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_q0rpe")
+
+[node name="LeftControl" type="Control" parent="GamePanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_h0jfx")
+
+[node name="LeftPanel" type="ColorRect" parent="GamePanel/LeftControl"]
+layout_mode = 2
+offset_right = 766.0
+offset_bottom = 1080.0
+
+[node name="DrinkTimer" type="Timer" parent="GamePanel/LeftControl/LeftPanel"]
+
+[node name="ChosenIngredients" type="Label" parent="GamePanel/LeftControl/LeftPanel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 100.0
+offset_right = 75.0
+offset_bottom = 123.0
+
+[node name="ProgressTimer" type="ProgressBar" parent="GamePanel/LeftControl/LeftPanel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 746.0
+offset_bottom = 40.0
+show_percentage = false
+
+[node name="Ingredient1" type="Sprite2D" parent="GamePanel/LeftControl/LeftPanel"]
+position = Vector2(160, 84)
+
+[node name="Ingredient2" type="Sprite2D" parent="GamePanel/LeftControl/LeftPanel"]
+position = Vector2(264, 88)
+
+[node name="Ingredient3" type="Sprite2D" parent="GamePanel/LeftControl/LeftPanel"]
+position = Vector2(368, 88)
+
+[node name="Ingredient4" type="Sprite2D" parent="GamePanel/LeftControl/LeftPanel"]
+position = Vector2(488, 88)
+
+[node name="QuantumCafe" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("4_vgije")
+
+[node name="Koffein" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("5_asirt")
+
+[node name="F" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("6_sd2o7")
+
+[node name="AlienFruit" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("7_pudxf")
+
+[node name="FingerClaw" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("8_iw28x")
+
+[node name="Zitrone" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("9_ns8k7")
+
+[node name="Lightspeed" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("10_5tgvw")
+
+[node name="MadInnit" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("11_3k3cv")
+
+[node name="Orange" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("12_k07sk")
+
+[node name="StellarVodka" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("13_g7fy1")
+
+[node name="Black" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("14_m14qh")
+
+[node name="CafeEncurtido" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("15_dpmpl")
+
+[node name="Curtis" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+
+[node name="GreatSuccess" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("15_asirt")
+
+[node name="GreatSuccess2" type="AudioStreamPlayer" parent="GamePanel/LeftControl/LeftPanel"]
+stream = ExtResource("16_sd2o7")
+
+[node name="ButtonContainer1" type="GridContainer" parent="GamePanel/LeftControl"]
+layout_mode = 2
+offset_left = 154.0
+offset_top = 350.0
+offset_right = 204.0
+offset_bottom = 400.0
+columns = 2
+
+[node name="ButtonContainer2" type="GridContainer" parent="GamePanel/LeftControl"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 350.0
+offset_right = 329.0
+offset_bottom = 400.0
+columns = 2
+
+[node name="ButtonContainer3" type="GridContainer" parent="GamePanel/LeftControl"]
+layout_mode = 2
+offset_left = 404.0
+offset_top = 350.0
+offset_right = 454.0
+offset_bottom = 400.0
+columns = 2
+
+[node name="ButtonContainer4" type="GridContainer" parent="GamePanel/LeftControl"]
+layout_mode = 2
+offset_left = 529.0
+offset_top = 350.0
+offset_right = 579.0
+offset_bottom = 400.0
+columns = 2
+
+[node name="ColorRect2" type="ColorRect" parent="GamePanel"]
+layout_mode = 0
+offset_left = 768.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.101157, 0.441434, 0.490475, 1)
+script = ExtResource("3_5bvbt")
+
+[node name="Label" type="Label" parent="GamePanel/ColorRect2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 792.0
+offset_right = 953.0
+offset_bottom = 931.0
+theme_override_fonts/font = ExtResource("4_llew5")
+theme_override_font_sizes/font_size = 40
+text = "Hola que tallllllll"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="GamePanel/ColorRect2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 419.0
+offset_right = 951.0
+offset_bottom = 558.0
+theme_override_fonts/font = ExtResource("5_r8j6e")
+theme_override_font_sizes/font_size = 40
+text = "Se fue"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[node name="Label3" type="Label" parent="GamePanel/ColorRect2"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 958.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("6_bq3us")
+theme_override_font_sizes/font_size = 60
+text = "nombre"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[node name="Button" type="Button" parent="GamePanel/ColorRect2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 936.0
+offset_right = 412.0
+offset_bottom = 1075.0
+theme_override_fonts/font = ExtResource("4_llew5")
+theme_override_font_sizes/font_size = 35
+text = "siiiiiiiiiiiii"
+autowrap_mode = 3
+
+[node name="Button2" type="Button" parent="GamePanel/ColorRect2"]
+layout_mode = 0
+offset_left = 546.0
+offset_top = 936.0
+offset_right = 953.0
+offset_bottom = 1075.0
+theme_override_fonts/font = ExtResource("4_llew5")
+theme_override_font_sizes/font_size = 35
+text = "noooooooooooooo"
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="GamePanel/ColorRect2"]
+wait_time = 20.0
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="GamePanel/ColorRect2"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 61.0
+show_percentage = false
