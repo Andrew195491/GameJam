@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://84dk0hud5woy"]
+[gd_scene load_steps=4 format=3 uid="uid://b01hs2ntekmpk"]
 
 [ext_resource type="Texture2D" uid="uid://d2iy5rwpbakas" path="res://images/menu de pausat.png" id="1_0x36i"]
-[ext_resource type="Script" uid="uid://bpo4w5fyw05ef" path="res://scripts/Pausa.gd" id="1_ff6no"]
+[ext_resource type="Script" path="res://scripts/Pausa.gd" id="1_ff6no"]
 [ext_resource type="Texture2D" uid="uid://dbwor1n6gtc7x" path="res://images/boton pausa_real.png" id="2_ff6no"]
 
 [node name="Pausa" type="Node2D"]

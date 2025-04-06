@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf5q18ub7aid2"]
+[gd_scene load_steps=6 format=3 uid="uid://cu1ytsjrdr6nl"]
 
 [ext_resource type="Script" uid="uid://4r5pta2y48u8" path="res://scripts/Dialogos.gd" id="1_e66qu"]
 [ext_resource type="FontFile" uid="uid://c26wtgdx4v4t0" path="res://font/static/Gluten-Light.ttf" id="2_4kivy"]

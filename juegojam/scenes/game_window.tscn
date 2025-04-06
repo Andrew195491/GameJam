@@ -1,6 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://gc4l84mvfqr8"]
 
 [ext_resource type="Script" uid="uid://cds8jncvv2vvu" path="res://scripts/GameWindow.gd" id="1_q0rpe"]
+[ext_resource type="PackedScene" uid="uid://b01hs2ntekmpk" path="res://scenes/Pausa.tscn" id="1_sd2o7"]
 [ext_resource type="Script" uid="uid://d21tpwo3u2462" path="res://scripts/LeftPanel.gd" id="2_h0jfx"]
 [ext_resource type="Script" uid="uid://4r5pta2y48u8" path="res://scripts/Dialogos.gd" id="3_5bvbt"]
 [ext_resource type="FontFile" uid="uid://c26wtgdx4v4t0" path="res://font/static/Gluten-Light.ttf" id="4_llew5"]
@@ -20,7 +21,6 @@
 [ext_resource type="AudioStream" uid="uid://d27p75bte3fjx" path="res://sound/jingles cocteles/jingle coctel 1.wav" id="15_asirt"]
 [ext_resource type="AudioStream" uid="uid://s06dj23ygtci" path="res://sound/SFX ingredientes/cafe encurtido.wav" id="15_dpmpl"]
 [ext_resource type="AudioStream" uid="uid://cu705sdkri2kg" path="res://sound/jingles cocteles/jingle coctel 2.wav" id="16_sd2o7"]
-[ext_resource type="PackedScene" uid="uid://84dk0hud5woy" path="res://scenes/Pausa.tscn" id="21_sd2o7"]
 
 [node name="GameWindow" type="Node2D"]
 
@@ -225,5 +225,5 @@ offset_right = 958.0
 offset_bottom = 61.0
 show_percentage = false
 
-[node name="Pausa" parent="GamePanel" instance=ExtResource("21_sd2o7")]
+[node name="Pausa" parent="." instance=ExtResource("1_sd2o7")]
 process_mode = 3
