@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c65rrkuxneht6"]
+
+[ext_resource type="Script" uid="uid://dlcvufpa60rkf" path="res://scenes/CreditsPanelSecond.gd" id="1_60iqr"]
+[ext_resource type="AudioStream" uid="uid://b1e3sdk4y2wx4" path="res://sound/Musica/gameplay demo v1.wav" id="2_wabmx"]
+
+[node name="SecondCreditWindow" type="Node2D"]
+script = ExtResource("1_60iqr")
+
+[node name="CreditsPanel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="CreditsMuffled" type="AudioStreamPlayer" parent="CreditsPanel"]
+stream = ExtResource("2_wabmx")
+autoplay = true
+bus = &"BackgroundMusic"

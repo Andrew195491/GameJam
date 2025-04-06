@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwu0ijslhhfac"
+path="res://.godot/imported/click_basico_square.wav-5ca1f206276069552e7ba3d33c4a26ad.sample"
+
+[deps]
+
+source_file="res://sound/SFX menus botones/click_basico_square.wav"
+dest_files=["res://.godot/imported/click_basico_square.wav-5ca1f206276069552e7ba3d33c4a26ad.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

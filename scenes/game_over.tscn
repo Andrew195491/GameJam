@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcpwkiesseig5"]
+
+[ext_resource type="Script" uid="uid://bbwjueh5d3h0o" path="res://scripts/GameOverMenu.gd" id="1_wqhvx"]
+[ext_resource type="FontFile" uid="uid://dsptnxqijaqv3" path="res://font/static/Gluten-SemiBold.ttf" id="2_wqhvx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_wqhvx")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 434.0
+offset_right = 1760.0
+offset_bottom = 656.0
+theme_override_fonts/font = ExtResource("2_wqhvx")
+theme_override_font_sizes/font_size = 250
+text = "GAME OVER"
+
+[node name="Cooldown" type="Timer" parent="Panel"]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="timeout" from="Panel/Cooldown" to="Panel" method="_on_cooldown_timeout"]

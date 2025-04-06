@@ -1,0 +1,377 @@
+[gd_scene load_steps=42 format=3 uid="uid://gc4l84mvfqr8"]
+
+[ext_resource type="Script" uid="uid://dbqrwen0bj6h1" path="res://scripts/PartyMusic.gd" id="1_8pbex"]
+[ext_resource type="Texture2D" uid="uid://cnahxdmjgcagq" path="res://images/Juego final/fondo_fondo.png" id="1_ns8k7"]
+[ext_resource type="Script" uid="uid://d21tpwo3u2462" path="res://scripts/LeftPanel.gd" id="2_h0jfx"]
+[ext_resource type="Script" uid="uid://4r5pta2y48u8" path="res://scripts/Dialogos.gd" id="3_5bvbt"]
+[ext_resource type="Texture2D" uid="uid://dtgqnupde0fhl" path="res://images/Juego final/chica_alien.png" id="3_m14qh"]
+[ext_resource type="FontFile" uid="uid://c26wtgdx4v4t0" path="res://font/static/Gluten-Light.ttf" id="4_llew5"]
+[ext_resource type="AudioStream" uid="uid://cjqhvr4u4gxuh" path="res://sound/SFX ingredientes/cafe_cuantico.wav" id="4_vgije"]
+[ext_resource type="AudioStream" uid="uid://chuuhpw53k6us" path="res://sound/SFX ingredientes/caffein.wav" id="5_asirt"]
+[ext_resource type="FontFile" uid="uid://c4x3n0fn1ncnq" path="res://font/static/Gluten-Medium.ttf" id="5_r8j6e"]
+[ext_resource type="FontFile" uid="uid://drgu8oulgspo3" path="res://font/static/Gluten-Bold.ttf" id="6_bq3us"]
+[ext_resource type="AudioStream" uid="uid://cvjb3vg5p6not" path="res://sound/SFX ingredientes/F.wav" id="6_sd2o7"]
+[ext_resource type="FontFile" uid="uid://b2sok1dsmtmp2" path="res://font/static/Gluten-Regular.ttf" id="7_0j44n"]
+[ext_resource type="AudioStream" uid="uid://bwaijs8nmsbc6" path="res://sound/SFX ingredientes/fruta_alien.wav" id="7_pudxf"]
+[ext_resource type="AudioStream" uid="uid://cycrj1h6hx7ui" path="res://sound/SFX ingredientes/garra_dedo.wav" id="8_iw28x"]
+[ext_resource type="AudioStream" uid="uid://coafa5yof4vb8" path="res://sound/SFX ingredientes/lemon.wav" id="9_ns8k7"]
+[ext_resource type="AudioStream" uid="uid://d6xmwx3yic18" path="res://sound/SFX ingredientes/lightspeed.wav" id="10_5tgvw"]
+[ext_resource type="AudioStream" uid="uid://cbivyitj5dlr8" path="res://sound/SFX ingredientes/MAD.wav" id="11_3k3cv"]
+[ext_resource type="AudioStream" uid="uid://brrsqdnnck23j" path="res://sound/SFX ingredientes/naranja.wav" id="12_k07sk"]
+[ext_resource type="AudioStream" uid="uid://cgxy3tpyhwiku" path="res://sound/SFX ingredientes/vodka_estelar.wav" id="13_g7fy1"]
+[ext_resource type="AudioStream" uid="uid://c5vetk023or5g" path="res://sound/SFX ingredientes/blackhole.wav" id="14_m14qh"]
+[ext_resource type="AudioStream" uid="uid://d27p75bte3fjx" path="res://sound/jingles cocteles/jingle_coctel_1.wav" id="15_asirt"]
+[ext_resource type="AudioStream" uid="uid://s06dj23ygtci" path="res://sound/SFX ingredientes/cafe_encurtido.wav" id="15_dpmpl"]
+[ext_resource type="Texture2D" uid="uid://vr45sfawawub" path="res://images/Juego final/Panel izq.png" id="16_asirt"]
+[ext_resource type="AudioStream" uid="uid://cu705sdkri2kg" path="res://sound/jingles cocteles/jingle_coctel_2.wav" id="16_sd2o7"]
+[ext_resource type="Texture2D" uid="uid://cu70n6b8b6agt" path="res://images/Juego final/caja de texto.png" id="17_sd2o7"]
+[ext_resource type="Texture2D" uid="uid://cxg7fbyrcn246" path="res://images/Juego final/coctelera/Maquina.png" id="18_pudxf"]
+[ext_resource type="Texture2D" uid="uid://dghcuxnntscob" path="res://images/Juego final/coctelera/Muffin.png" id="21_dpmpl"]
+[ext_resource type="Texture2D" uid="uid://dcttmom2gn2tt" path="res://images/Juego final/coctelera/OrangeCocktail.png" id="22_nc6c0"]
+[ext_resource type="Texture2D" uid="uid://ctqq2gm4joqrv" path="res://images/Juego final/coctelera/Eye.png" id="23_bcbiy"]
+[ext_resource type="Texture2D" uid="uid://r6hxg61maawi" path="res://images/Juego final/gente_fondo.png" id="24_5tgvw"]
+[ext_resource type="Texture2D" uid="uid://i22pmymdgvju" path="res://images/Juego final/coctelera/FatMan.png" id="24_8pbex"]
+[ext_resource type="Texture2D" uid="uid://bcdlnyl3lk8ls" path="res://images/Juego final/coctelera/ClosedCocktail.png" id="25_nc6c0"]
+[ext_resource type="Texture2D" uid="uid://bu6u523b6xw5f" path="res://images/Juego final/coctelera/OpenCocktail.png" id="26_bcbiy"]
+[ext_resource type="Texture2D" uid="uid://bj0epfipow2ai" path="res://images/Juego final/mask_overlay.png" id="29_bqj3n"]
+[ext_resource type="AudioStream" uid="uid://b1e3sdk4y2wx4" path="res://sound/Musica/gameplay demo v1.wav" id="33_0j44n"]
+[ext_resource type="Texture2D" uid="uid://c61ovi3i702uc" path="res://assets/grupo_1.png" id="34_30xwx"]
+[ext_resource type="Texture2D" uid="uid://lypi0tlwr4p4" path="res://assets/cafe_cuantico.png" id="37_2a3hs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nc6c0"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcbiy"]
+bg_color = Color(0.374637, 1, 0.304112, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pbex"]
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0j44n"]
+bg_color = Color(0, 0.603922, 0.878431, 0.823529)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="GameWindow" type="Node2D"]
+script = ExtResource("1_8pbex")
+
+[node name="FondoFondo" type="Sprite2D" parent="."]
+position = Vector2(958, 540.5)
+scale = Vector2(1.00417, 0.997222)
+texture = ExtResource("1_ns8k7")
+
+[node name="FondoFinal" type="Sprite2D" parent="."]
+light_mask = 512
+visibility_layer = 512
+z_index = 1
+position = Vector2(957, 541.5)
+scale = Vector2(1.0068, 0.993518)
+texture = ExtResource("16_asirt")
+
+[node name="CajaDeTexto" type="Sprite2D" parent="FondoFinal"]
+position = Vector2(390.322, -0.969543)
+scale = Vector2(1.0039, 1)
+texture = ExtResource("17_sd2o7")
+
+[node name="LeftControl" type="Control" parent="FondoFinal"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -956.5
+offset_top = -540.0
+offset_right = -916.5
+offset_bottom = -500.0
+script = ExtResource("2_h0jfx")
+metadata/_edit_use_anchors_ = true
+
+[node name="LeftPanel" type="ColorRect" parent="FondoFinal/LeftControl"]
+layout_mode = 2
+offset_right = 766.0
+offset_bottom = 1080.0
+scale = Vector2(1.26, 1.26)
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="DrinkTimer" type="Timer" parent="FondoFinal/LeftControl/LeftPanel"]
+
+[node name="ChosenIngredients" type="Label" parent="FondoFinal/LeftControl/LeftPanel"]
+layout_mode = 0
+offset_left = 72.9514
+offset_top = 79.3408
+offset_right = 112.952
+offset_bottom = 102.341
+theme_override_fonts/font = ExtResource("7_0j44n")
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressTimer" type="ProgressBar" parent="FondoFinal/LeftControl/LeftPanel"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 16.0
+offset_right = 570.0
+offset_bottom = 43.0
+theme_override_styles/background = SubResource("StyleBoxFlat_nc6c0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bcbiy")
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Ingredient1" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(206.655, 87.1746)
+
+[node name="Ingredient2" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(271.117, 88)
+
+[node name="Ingredient3" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(335.579, 88)
+
+[node name="Ingredient4" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(401.017, 91.1747)
+
+[node name="QuantumCafe" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("4_vgije")
+
+[node name="Koffein" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("5_asirt")
+
+[node name="F" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("6_sd2o7")
+
+[node name="AlienFruit" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("7_pudxf")
+
+[node name="FingerClaw" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("8_iw28x")
+
+[node name="Zitrone" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("9_ns8k7")
+
+[node name="Lightspeed" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("10_5tgvw")
+
+[node name="MadInnit" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("11_3k3cv")
+
+[node name="Orange" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("12_k07sk")
+
+[node name="StellarVodka" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("13_g7fy1")
+
+[node name="Black" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("14_m14qh")
+
+[node name="CafeEncurtido" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("15_dpmpl")
+
+[node name="Curtis" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+
+[node name="GreatSuccess" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("15_asirt")
+
+[node name="GreatSuccess2" type="AudioStreamPlayer" parent="FondoFinal/LeftControl/LeftPanel"]
+stream = ExtResource("16_sd2o7")
+
+[node name="Maquina" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(308.469, 329.198)
+scale = Vector2(0.253101, 0.254466)
+texture = ExtResource("18_pudxf")
+
+[node name="FatMan" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(308.469, 329.198)
+scale = Vector2(0.253101, 0.254466)
+texture = ExtResource("24_8pbex")
+
+[node name="Eye" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(308.469, 329.198)
+scale = Vector2(0.253101, 0.254466)
+texture = ExtResource("23_bcbiy")
+
+[node name="Muffin" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(308.469, 329.198)
+scale = Vector2(0.253101, 0.254466)
+texture = ExtResource("21_dpmpl")
+
+[node name="OrangeCocktail" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(308.469, 329.198)
+scale = Vector2(0.253101, 0.254466)
+texture = ExtResource("22_nc6c0")
+
+[node name="ClosedCocktail" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(308.469, 329.198)
+scale = Vector2(0.253101, 0.254466)
+texture = ExtResource("25_nc6c0")
+
+[node name="OpenCocktail" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+texture_filter = 4
+position = Vector2(308.864, 329.198)
+scale = Vector2(0.253484, 0.254466)
+texture = ExtResource("26_bcbiy")
+
+[node name="MaskOverlay" type="Sprite2D" parent="FondoFinal/LeftControl/LeftPanel"]
+position = Vector2(310.59, 329.117)
+scale = Vector2(0.78829, 0.798829)
+texture = ExtResource("29_bqj3n")
+
+[node name="ButtonContainer1" type="GridContainer" parent="FondoFinal/LeftControl"]
+layout_mode = 2
+offset_left = 110.015
+offset_top = 668.0
+offset_right = 160.015
+offset_bottom = 718.0
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonContainer2" type="GridContainer" parent="FondoFinal/LeftControl"]
+layout_mode = 0
+offset_left = 262.971
+offset_top = 669.0
+offset_right = 335.971
+offset_bottom = 740.0
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonContainer3" type="GridContainer" parent="FondoFinal/LeftControl"]
+layout_mode = 2
+offset_left = 412.967
+offset_top = 668.0
+offset_right = 491.967
+offset_bottom = 745.0
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonContainer4" type="GridContainer" parent="FondoFinal/LeftControl"]
+layout_mode = 2
+offset_left = 566.978
+offset_top = 670.0
+offset_right = 633.978
+offset_bottom = 742.0
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="FondoFinal"]
+offset_left = -184.725
+offset_top = -540.0
+offset_right = 967.275
+offset_bottom = 540.0
+color = Color(0.101961, 0.443137, 0.490196, 0)
+script = ExtResource("3_5bvbt")
+metadata/_edit_use_anchors_ = true
+
+[node name="ChicaAlien" type="Sprite2D" parent="FondoFinal/ColorRect2"]
+position = Vector2(699.391, 430.957)
+scale = Vector2(1.26, 1.26)
+texture = ExtResource("3_m14qh")
+
+[node name="CafeCuantico" type="Sprite2D" parent="FondoFinal/ColorRect2"]
+position = Vector2(293.982, 323.094)
+scale = Vector2(0.993246, 1.00652)
+texture = ExtResource("37_2a3hs")
+
+[node name="Grupo1" type="Sprite2D" parent="FondoFinal/ColorRect2"]
+position = Vector2(485.679, 303.97)
+texture = ExtResource("34_30xwx")
+
+[node name="Label" type="Label" parent="FondoFinal/ColorRect2"]
+layout_mode = 0
+offset_left = 68.0036
+offset_top = 755.0
+offset_right = 1048.0
+offset_bottom = 908.0
+theme_override_fonts/font = ExtResource("4_llew5")
+theme_override_font_sizes/font_size = 40
+text = "Hola que tallllllll"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="FondoFinal/ColorRect2"]
+layout_mode = 0
+offset_left = 89.7623
+offset_top = 414.364
+offset_right = 1037.76
+offset_bottom = 553.364
+theme_override_fonts/font = ExtResource("5_r8j6e")
+theme_override_font_sizes/font_size = 40
+text = "Se fue"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="FondoFinal/ColorRect2"]
+layout_mode = 0
+offset_left = 77.8472
+offset_top = 78.8303
+offset_right = 1035.85
+offset_bottom = 178.83
+theme_override_fonts/font = ExtResource("6_bq3us")
+theme_override_font_sizes/font_size = 60
+text = "nombre"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="FondoFinal/ColorRect2"]
+layout_mode = 0
+offset_left = 73.0182
+offset_top = 950.0
+offset_right = 530.018
+offset_bottom = 1043.0
+theme_override_fonts/font = ExtResource("4_llew5")
+theme_override_font_sizes/font_size = 35
+text = "siiiiiiiiiiiii"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="FondoFinal/ColorRect2"]
+layout_mode = 0
+offset_left = 573.0
+offset_top = 941.0
+offset_right = 1058.0
+offset_bottom = 1043.0
+theme_override_fonts/font = ExtResource("4_llew5")
+theme_override_font_sizes/font_size = 35
+text = "noooooooooooooo"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="FondoFinal/ColorRect2"]
+wait_time = 20.0
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="FondoFinal/ColorRect2"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 9.87786
+offset_right = 1141.0
+offset_bottom = 70.8779
+theme_override_styles/background = SubResource("StyleBoxFlat_8pbex")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0j44n")
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="GenteFondo" type="Sprite2D" parent="."]
+position = Vector2(1322, 439)
+texture = ExtResource("24_5tgvw")
+
+[node name="PartyMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_0j44n")
+volume_db = -3.0
+autoplay = true
+bus = &"BackgroundMusic"

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c65rrkuxneht6"]
+
+[ext_resource type="Script" uid="uid://dlcvufpa60rkf" path="res://scenes/CreditsPanelSecond.gd" id="1_60iqr"]
+[ext_resource type="AudioStream" uid="uid://dw5tb42mlduho" path="res://sound/Musica/main menu demo v1.wav" id="2_wabmx"]
+
+[node name="SettingsWindow" type="Node2D"]
+
+[node name="CreditsPanel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_60iqr")
+
+[node name="CreditsMuffled" type="AudioStreamPlayer" parent="CreditsPanel"]
+stream = ExtResource("2_wabmx")
+
+[node name="Control" type="Control" parent="CreditsPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CreditsContainer" type="VBoxContainer" parent="CreditsPanel/Control"]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 381.0
+offset_right = 1071.0
+offset_bottom = 513.0
+
+[node name="BackButton" type="Button" parent="CreditsPanel/Control/CreditsContainer"]
+layout_mode = 2

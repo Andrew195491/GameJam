@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d27p75bte3fjx"
+path="res://.godot/imported/jingle_coctel_1.wav-1d2bd1b28bbb1ba7be80061906a1700f.sample"
+
+[deps]
+
+source_file="res://sound/jingles cocteles/jingle_coctel_1.wav"
+dest_files=["res://.godot/imported/jingle_coctel_1.wav-1d2bd1b28bbb1ba7be80061906a1700f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cycrj1h6hx7ui"
+path="res://.godot/imported/garra_dedo.wav-8af00b4b91df57a52706e0ab84400e5b.sample"
+
+[deps]
+
+source_file="res://sound/SFX ingredientes/garra_dedo.wav"
+dest_files=["res://.godot/imported/garra_dedo.wav-8af00b4b91df57a52706e0ab84400e5b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

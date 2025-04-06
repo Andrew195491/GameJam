@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://doymdslx1noww"]
+
+[ext_resource type="Script" uid="uid://di0x14cc8s1pt" path="res://scripts/MenuPanel.gd" id="1_0wfyh"]
+[ext_resource type="AudioStream" uid="uid://mfbpg7mxy2nk" path="res://sound/SFX menus botones/click_basico_sine.wav" id="2_tipki"]
+[ext_resource type="AudioStream" uid="uid://bndl87fbys6e3" path="res://sound/SFX menus botones/click_basico_sine_2.wav" id="3_85g3d"]
+[ext_resource type="AudioStream" uid="uid://dwu0ijslhhfac" path="res://sound/SFX menus botones/click_basico_square.wav" id="4_choun"]
+[ext_resource type="AudioStream" uid="uid://csv8t3i7jyyxr" path="res://sound/SFX menus botones/click_basico_square_2.wav" id="5_ya4ey"]
+[ext_resource type="AudioStream" uid="uid://csqa2fpmecqrl" path="res://sound/SFX menus botones/click_basico_noise.wav" id="6_eb6dy"]
+[ext_resource type="AudioStream" uid="uid://b2b4vxycbkuc3" path="res://sound/SFX menus botones/click_basico_noise_2.wav" id="7_trceg"]
+[ext_resource type="AudioStream" uid="uid://e2yfkq0btf0m" path="res://sound/SFX menus botones/bad_omen_sawtooth.wav" id="8_a8y0u"]
+[ext_resource type="AudioStream" uid="uid://dw5tb42mlduho" path="res://sound/Musica/main menu demo v1.wav" id="9_85g3d"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="MenuPanel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_0wfyh")
+
+[node name="Control" type="Control" parent="MenuPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuContainer" type="VBoxContainer" parent="MenuPanel/Control"]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 448.0
+offset_right = 1087.0
+offset_bottom = 580.0
+
+[node name="PlayButton" type="Button" parent="MenuPanel/Control/MenuContainer"]
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="MenuPanel/Control/MenuContainer"]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="MenuPanel/Control/MenuContainer"]
+layout_mode = 2
+
+[node name="Sine1" type="AudioStreamPlayer" parent="MenuPanel/Control/MenuContainer"]
+stream = ExtResource("2_tipki")
+volume_db = 3.0
+
+[node name="Sine2" type="AudioStreamPlayer" parent="MenuPanel/Control/MenuContainer"]
+stream = ExtResource("3_85g3d")
+volume_db = 3.0
+
+[node name="Square1" type="AudioStreamPlayer" parent="MenuPanel/Control/MenuContainer"]
+stream = ExtResource("4_choun")
+volume_db = 3.0
+
+[node name="Square2" type="AudioStreamPlayer" parent="MenuPanel/Control/MenuContainer"]
+stream = ExtResource("5_ya4ey")
+volume_db = 3.0
+
+[node name="Noise1" type="AudioStreamPlayer" parent="MenuPanel/Control/MenuContainer"]
+stream = ExtResource("6_eb6dy")
+volume_db = 3.0
+
+[node name="Noise2" type="AudioStreamPlayer" parent="MenuPanel/Control/MenuContainer"]
+stream = ExtResource("7_trceg")
+volume_db = 3.0
+
+[node name="Minecraft" type="AudioStreamPlayer" parent="MenuPanel/Control/MenuContainer"]
+stream = ExtResource("8_a8y0u")
+volume_db = 24.0
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="MenuPanel"]
+stream = ExtResource("9_85g3d")
+volume_db = 3.0
